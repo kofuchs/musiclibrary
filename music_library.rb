@@ -1,7 +1,7 @@
 require "rexml/document"
-require "FolderReader"
-require "XMLCreator"
-require "config"
+require "lib/folder_reader"
+require "lib/xml_creator"
+require "lib/config"
 include REXML
 
 run = XMLCreator.new

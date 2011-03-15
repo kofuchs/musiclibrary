@@ -29,8 +29,8 @@ class XMLCreator
   
   def add_info_param(key, value)
     param = Element.new(key)
-    param.add_attribute("total", value)
-    self.reader.xml_doc.root.elements[2].elements << param
+    param.add_attribute("total", value.to_s)
+    self.reader.xml_doc.root.elements[1].elements << param
   end
   
   def create_file
