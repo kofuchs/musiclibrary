@@ -5,11 +5,11 @@ musiclibrary is a (very) simple Ruby application that I use to keep organize my 
 h2. Information
 
 * I use iTunes folder structure. If you use something else, you are going to need to adapt some code...
-* There is a *config.rb* file where you are going to point to your music folder and where you want to save the xml file.
+* There is a *config.rb* file inside the lib folder where you are going to point to your music folder and where you want to save the xml file.
 * Inside the folder *musiclibreader* you may find the php file I mentioned before. If you decide to use this, you may need to copy the generated xml file or rename it to *musiclib.xml*
 
 h2. Running
 
 * Don't forget to check *config.rb* before you run the script.
-* Just run the *MusicLibrary.rb* (ruby MusicLibrary.rb)
+* Just run the *music_library.rb* (ruby music_library)
 * That's it!
