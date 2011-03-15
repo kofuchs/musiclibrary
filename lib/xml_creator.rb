@@ -15,12 +15,12 @@ class XMLCreator
     self.reader.xml_doc.root.add_element(el)
   end
   
-  def process
-    self.add_element(LIBRARY_NAME)
+  def process(lib_name, folder)
+    self.add_element(lib_name.to_s)
     self.add_root_element("music")
     self.add_root_element("info")
     
-    self.reader.artists_to_xml(FOLDER)
+    self.reader.artists_to_xml(folder.to_s)
 
     add_info_param("artists", self.reader.xml_doc.root.elements[1].to_a.length)
     add_info_param("albums", self.reader.album_count)
@@ -33,8 +33,8 @@ class XMLCreator
     self.reader.xml_doc.root.elements[1].elements << param
   end
   
-  def create_file
-    file = File.new("#{SAVE_AT}/Library #{Time.now.month}-#{Time.now.day}-#{Time.now.year}.xml", "w")
+  def create_file(save_at)
+    file = File.new("#{save_at.to_s}/Library #{Time.now.month}-#{Time.now.day}-#{Time.now.year}.xml", "w")
     file << "<?xml version='1.0' encoding='UTF-8'?>"
     file << self.reader.xml_doc
   end
